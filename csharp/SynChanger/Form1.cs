@@ -19,9 +19,32 @@ namespace SynChanger
 
         private void changeButton_Click(object sender, EventArgs e)
         {
-            string text = beforeTextBox.Text;
+            //! clear existing result
+            afterTextBox.Clear();
 
-            afterTextBox.Text = text;
+            //! copy data to afterTextBox
+            string strPreText = beforeTextBox.Text;
+            for (int i = 0; i < strPreText.Length; ++i)
+            {
+                switch(strPreText[i])
+                {
+                    case '<':
+                        afterTextBox.Text += "&lt;";
+                        break;
+                    case '>':
+                        afterTextBox.Text += "&gt;";
+                        break;
+                    case '&':
+                        afterTextBox.Text += "&amp;";
+                        break;
+                    case '"':
+                        afterTextBox.Text += "&quot;";
+                        break;
+                    default:
+                        afterTextBox.Text += strPreText[i];
+                        break;
+                }
+            }
         }
     }
 }
