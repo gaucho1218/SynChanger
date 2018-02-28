@@ -16,5 +16,12 @@ namespace SynChanger
         {
             InitializeComponent();
         }
+
+        private void changeButton_Click(object sender, EventArgs e)
+        {
+            string text = beforeTextBox.Text;
+
+            afterTextBox.Text = text;
+        }
     }
 }
