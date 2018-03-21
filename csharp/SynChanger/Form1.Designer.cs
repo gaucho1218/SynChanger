@@ -42,6 +42,7 @@
             this.beforeTextBox.Size = new System.Drawing.Size(250, 290);
             this.beforeTextBox.TabIndex = 2;
             this.beforeTextBox.Text = "";
+            this.beforeTextBox.TextChanged += new System.EventHandler(this.beforeTextBox_TextChanged);
             // 
             // afterTextBox
             // 

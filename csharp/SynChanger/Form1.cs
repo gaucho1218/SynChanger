@@ -17,7 +17,7 @@ namespace SynChanger
             InitializeComponent();
         }
 
-        private void changeButton_Click(object sender, EventArgs e)
+        private void changeSyntax()
         {
             //! clear existing result
             afterTextBox.Clear();
@@ -26,7 +26,7 @@ namespace SynChanger
             string strPreText = beforeTextBox.Text;
             for (int i = 0; i < strPreText.Length; ++i)
             {
-                switch(strPreText[i])
+                switch (strPreText[i])
                 {
                     case '<':
                         afterTextBox.Text += "&lt;";
@@ -47,6 +47,11 @@ namespace SynChanger
             }
         }
 
+        private void changeButton_Click(object sender, EventArgs e)
+        {
+            changeSyntax();
+        }
+
         private void mainForm_Resize(object sender, EventArgs e)
         {
             Control control = (Control)sender;
@@ -58,6 +63,11 @@ namespace SynChanger
                 afterTextBox.Location = new Point(beforeTextBox.Location.X + beforeTextBox.Width + 60, afterTextBox.Location.Y);
                 afterTextBox.Width = (control.Width - 100) / 2;
             }
+        }
+
+        private void beforeTextBox_TextChanged(object sender, EventArgs e)
+        {
+            changeSyntax();
         }
     }
 }
