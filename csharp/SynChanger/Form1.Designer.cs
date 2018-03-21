@@ -74,6 +74,7 @@
             this.Controls.Add(this.beforeTextBox);
             this.Name = "mainForm";
             this.Text = "SynChanger";
+            this.Resize += new System.EventHandler(this.mainForm_Resize);
             this.ResumeLayout(false);
 
         }

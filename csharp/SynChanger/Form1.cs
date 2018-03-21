@@ -46,5 +46,18 @@ namespace SynChanger
                 }
             }
         }
+
+        private void mainForm_Resize(object sender, EventArgs e)
+        {
+            Control control = (Control)sender;
+            if( control.Width - 100 > beforeTextBox.Width )
+            {
+                beforeTextBox.Width = (control.Width - 100) / 2;
+
+                //! afterbox also need to change x coordination
+                afterTextBox.Location = new Point(beforeTextBox.Location.X + beforeTextBox.Width + 60, afterTextBox.Location.Y);
+                afterTextBox.Width = (control.Width - 100) / 2;
+            }
+        }
     }
 }
