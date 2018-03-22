@@ -42,6 +42,7 @@
             this.beforeTextBox.Size = new System.Drawing.Size(250, 290);
             this.beforeTextBox.TabIndex = 2;
             this.beforeTextBox.Text = "";
+            this.beforeTextBox.TextChanged += new System.EventHandler(this.beforeTextBox_TextChanged);
             // 
             // afterTextBox
             // 
@@ -62,6 +63,7 @@
             this.changeButton.TabIndex = 4;
             this.changeButton.Text = "Change";
             this.changeButton.UseVisualStyleBackColor = true;
+            this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
             // 
             // mainForm
             // 
@@ -73,6 +75,7 @@
             this.Controls.Add(this.beforeTextBox);
             this.Name = "mainForm";
             this.Text = "SynChanger";
+            this.Resize += new System.EventHandler(this.mainForm_Resize);
             this.ResumeLayout(false);
 
         }
