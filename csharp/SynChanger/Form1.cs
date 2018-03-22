@@ -16,7 +16,6 @@ namespace SynChanger
         {
             InitializeComponent();
         }
-
         private void changeSyntax()
         {
             //! clear existing result
@@ -51,12 +50,6 @@ namespace SynChanger
         {
             Clipboard.Clear();
             Clipboard.SetText(afterTextBox.Text);
-        }
-
-        private void changeButton_Click(object sender, EventArgs e)
-        {
-            changeSyntax();
-            copyToClipBoard();
         }
 
         private void beforeTextBox_TextChanged(object sender, EventArgs e)

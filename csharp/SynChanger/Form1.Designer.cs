@@ -54,17 +54,6 @@
             this.afterTextBox.TabIndex = 3;
             this.afterTextBox.Text = "";
             // 
-            // changeButton
-            // 
-            this.changeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.changeButton.Location = new System.Drawing.Point(497, 12);
-            this.changeButton.Name = "changeButton";
-            this.changeButton.Size = new System.Drawing.Size(75, 23);
-            this.changeButton.TabIndex = 4;
-            this.changeButton.Text = "Change";
-            this.changeButton.UseVisualStyleBackColor = true;
-            this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
-            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
