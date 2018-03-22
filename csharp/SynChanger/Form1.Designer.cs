@@ -30,16 +30,15 @@
         {
             this.beforeTextBox = new System.Windows.Forms.RichTextBox();
             this.afterTextBox = new System.Windows.Forms.RichTextBox();
-            this.changeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // beforeTextBox
             // 
             this.beforeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.beforeTextBox.Location = new System.Drawing.Point(12, 59);
+            this.beforeTextBox.Location = new System.Drawing.Point(12, 12);
             this.beforeTextBox.Name = "beforeTextBox";
-            this.beforeTextBox.Size = new System.Drawing.Size(250, 290);
+            this.beforeTextBox.Size = new System.Drawing.Size(250, 337);
             this.beforeTextBox.TabIndex = 2;
             this.beforeTextBox.Text = "";
             this.beforeTextBox.TextChanged += new System.EventHandler(this.beforeTextBox_TextChanged);
@@ -48,9 +47,9 @@
             // 
             this.afterTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.afterTextBox.Location = new System.Drawing.Point(322, 59);
+            this.afterTextBox.Location = new System.Drawing.Point(322, 12);
             this.afterTextBox.Name = "afterTextBox";
-            this.afterTextBox.Size = new System.Drawing.Size(250, 290);
+            this.afterTextBox.Size = new System.Drawing.Size(250, 337);
             this.afterTextBox.TabIndex = 3;
             this.afterTextBox.Text = "";
             // 
@@ -59,7 +58,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
-            this.Controls.Add(this.changeButton);
             this.Controls.Add(this.afterTextBox);
             this.Controls.Add(this.beforeTextBox);
             this.Name = "mainForm";
@@ -73,7 +71,6 @@
 
         private System.Windows.Forms.RichTextBox beforeTextBox;
         private System.Windows.Forms.RichTextBox afterTextBox;
-        private System.Windows.Forms.Button changeButton;
     }
 }
 
