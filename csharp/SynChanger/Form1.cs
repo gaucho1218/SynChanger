@@ -16,7 +16,6 @@ namespace SynChanger
         {
             InitializeComponent();
         }
-
         private void changeSyntax()
         {
             //! clear existing result
@@ -47,9 +46,16 @@ namespace SynChanger
             }
         }
 
-        private void changeButton_Click(object sender, EventArgs e)
+        private void copyToClipBoard()
+        {
+            Clipboard.Clear();
+            Clipboard.SetText(afterTextBox.Text);
+        }
+
+        private void beforeTextBox_TextChanged(object sender, EventArgs e)
         {
             changeSyntax();
+            copyToClipBoard();
         }
 
         private void mainForm_Resize(object sender, EventArgs e)
@@ -63,11 +69,6 @@ namespace SynChanger
                 afterTextBox.Location = new Point(beforeTextBox.Location.X + beforeTextBox.Width + 60, afterTextBox.Location.Y);
                 afterTextBox.Width = (control.Width - 100) / 2;
             }
-        }
-
-        private void beforeTextBox_TextChanged(object sender, EventArgs e)
-        {
-            changeSyntax();
         }
     }
 }
