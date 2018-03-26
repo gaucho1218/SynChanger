@@ -62,7 +62,7 @@ namespace SynChanger
         private void mainForm_Resize(object sender, EventArgs e)
         {
             Control control = (Control)sender;
-            if( control.Width - 100 > beforeTextBox.Width )
+            if( control.Width - 100 != beforeTextBox.Width )
             {
                 beforeTextBox.Width = (control.Width - 100) / 2;
 
