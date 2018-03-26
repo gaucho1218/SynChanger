@@ -56,6 +56,7 @@ namespace SynChanger
         {
             changeSyntax();
             copyToClipBoard();
+            MessageBox.Show("Result copied to clipboard!");
         }
 
         private void mainForm_Resize(object sender, EventArgs e)
