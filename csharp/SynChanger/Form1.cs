@@ -56,18 +56,29 @@ namespace SynChanger
         {
             changeSyntax();
             copyToClipBoard();
+            MessageBox.Show("Result copied to clipboard!");
         }
 
         private void mainForm_Resize(object sender, EventArgs e)
         {
             Control control = (Control)sender;
-            if( control.Width - 100 > beforeTextBox.Width )
+            if( control.Width - 100 != beforeTextBox.Width )
             {
                 beforeTextBox.Width = (control.Width - 100) / 2;
 
                 //! afterbox also need to change x coordination
                 afterTextBox.Location = new Point(beforeTextBox.Location.X + beforeTextBox.Width + 60, afterTextBox.Location.Y);
                 afterTextBox.Width = (control.Width - 100) / 2;
+            }
+        }
+
+        private void beforeTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.Control && e.KeyCode == Keys.V) || (e.Shift && e.KeyCode == Keys.I))
+            {
+                if (Clipboard.ContainsText())
+                    beforeTextBox.SelectedText = Clipboard.GetText();
+                e.Handled = true;
             }
         }
     }
