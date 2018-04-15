@@ -71,5 +71,15 @@ namespace SynChanger
                 afterTextBox.Width = (control.Width - 100) / 2;
             }
         }
+
+        private void beforeTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.Control && e.KeyCode == Keys.V) || (e.Shift && e.KeyCode == Keys.I))
+            {
+                if (Clipboard.ContainsText())
+                    beforeTextBox.SelectedText = Clipboard.GetText();
+                e.Handled = true;
+            }
+        }
     }
 }

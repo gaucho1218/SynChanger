@@ -42,6 +42,7 @@
             this.beforeTextBox.TabIndex = 2;
             this.beforeTextBox.Text = "";
             this.beforeTextBox.TextChanged += new System.EventHandler(this.beforeTextBox_TextChanged);
+            this.beforeTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.beforeTextBox_KeyDown);
             // 
             // afterTextBox
             // 
