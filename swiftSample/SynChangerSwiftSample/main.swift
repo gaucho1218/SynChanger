@@ -2,7 +2,7 @@
 //  main.swift
 //  SynChangerSwiftSample
 //
-//  Created by Hansuck Shim on 2018. 1. 13..
+//  Created by gaucho1218 on 2018. 1. 13..
 //  Copyright © 2018년 gaucho1218. All rights reserved.
 //
 
