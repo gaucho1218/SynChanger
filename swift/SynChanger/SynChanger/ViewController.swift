@@ -9,13 +9,11 @@
 import Cocoa
 
 class ViewController: NSViewController, NSWindowDelegate {
-
-    @IBOutlet weak var afterField: NSTextField!
-    @IBOutlet weak var beforeField: NSTextField!
     
     @IBOutlet weak var progressIndicator: NSProgressIndicator!
     @IBOutlet weak var beforeView: NSScrollView!
     @IBOutlet weak var afterView: NSScrollView!
+    @IBOutlet weak var ResultLabel: NSTextField!
     
     override func viewDidAppear() {
         view.window?.delegate = self
@@ -65,13 +63,10 @@ class ViewController: NSViewController, NSWindowDelegate {
         let width = (view.window?.frame.size.width)!
         let height = (view.window?.frame.size.height)!
    
-        progressIndicator.frame = NSMakeRect(20, height - 51,
-                                             width - 40, 20)
+        progressIndicator.frame = NSMakeRect(20, height - 53, width - 40, 20)
+        ResultLabel.frame = NSMakeRect(width/2 + 8, height - 77 , 42, 17)
         
-        
-        /*
-        beforeView.frame = NSMakeRect(15, 15, width, height)
-        afterView.frame = NSMakeRect(width + 35, 15, width, height)
- */
+        beforeView.frame = NSMakeRect(20, 20, width/2 - 30, height - 113)
+        afterView.frame = NSMakeRect(width/2 + 10, 20, width/2 - 30, height - 113)
     }
 }

@@ -788,6 +788,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="ResultLabel" destination="pII-R8-F0R" id="Nb7-x5-6YY"/>
                         <outlet property="afterView" destination="Dbp-Xo-1OZ" id="BWo-kU-Gyb"/>
                         <outlet property="beforeView" destination="u5S-IX-tXf" id="iiI-CX-hSG"/>
                         <outlet property="progressIndicator" destination="LUs-ms-ajr" id="EjH-u6-Nb4"/>
