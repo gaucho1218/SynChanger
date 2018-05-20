@@ -10,6 +10,8 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var afterField: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +26,8 @@ class ViewController: NSViewController {
     
     @IBAction func beforeFiledChanged(_ sender: NSTextField) {
         print("before: \(sender.stringValue)")
+        
+        afterField.stringValue = sender.stringValue
     }
 }
 
