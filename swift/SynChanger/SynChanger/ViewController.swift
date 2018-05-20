@@ -35,35 +35,36 @@ class ViewController: NSViewController, NSWindowDelegate, NSTextViewDelegate {
     }
     
     func textDidChange(_ notification: Notification) {
-        print(beforeText.string)
-    }
-
-    @IBAction func beforeFiledChanged(_ sender: NSTextField) {
-        /*
-        afterView.stringValue = ""
-        
-        for c in sender.stringValue
+        DispatchQueue.main.async()
         {
-            switch c
+            self.afterText.string = ""
+            self.progressIndicator.minValue = 0
+            self.progressIndicator.maxValue = Double(self.beforeText.string.count)
+            
+            for c in self.beforeText.string
             {
-            case "<":
-                afterView.stringValue += "&lt;"
-                break
-            case ">":
-                afterView.stringValue += "&gt;"
-                break
-            case "&":
-                afterView.stringValue += "&amp;"
-                break
-            case "\"":
-                afterView.stringValue += "&quot;"
-                break
-            default:
-                afterView.stringValue += String(c)
-                break
+                switch c
+                {
+                case "<":
+                    self.afterText.string += "&lt;"
+                    break
+                case ">":
+                    self.afterText.string += "&gt;"
+                    break
+                case "&":
+                    self.afterText.string += "&amp;"
+                    break
+                case "\"":
+                    self.afterText.string += "&quot;"
+                    break
+                default:
+                    self.afterText.string += String(c)
+                    break
+                }
+                
+                self.progressIndicator.increment(by: 1)
             }
         }
- */
     }
     
     func windowDidResize(_ notification: Notification) {
