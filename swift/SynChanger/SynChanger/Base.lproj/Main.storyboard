@@ -716,7 +716,7 @@
                                     <rect key="frame" x="1" y="1" width="208" height="177"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView ambiguous="YES" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="kgN-dO-Rcu">
+                                        <textView ambiguous="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="kgN-dO-Rcu">
                                             <rect key="frame" x="0.0" y="-1" width="208" height="177"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -743,7 +743,7 @@
                                     <rect key="frame" x="1" y="1" width="208" height="177"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView ambiguous="YES" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="hNH-S7-nXR">
+                                        <textView ambiguous="YES" editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="hNH-S7-nXR">
                                             <rect key="frame" x="0.0" y="-1" width="208" height="177"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -789,7 +789,9 @@
                     </view>
                     <connections>
                         <outlet property="ResultLabel" destination="pII-R8-F0R" id="Nb7-x5-6YY"/>
+                        <outlet property="afterText" destination="hNH-S7-nXR" id="F5V-am-ody"/>
                         <outlet property="afterView" destination="Dbp-Xo-1OZ" id="BWo-kU-Gyb"/>
+                        <outlet property="beforeText" destination="kgN-dO-Rcu" id="3Z2-ka-c45"/>
                         <outlet property="beforeView" destination="u5S-IX-tXf" id="iiI-CX-hSG"/>
                         <outlet property="progressIndicator" destination="LUs-ms-ajr" id="EjH-u6-Nb4"/>
                     </connections>

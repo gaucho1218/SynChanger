@@ -8,12 +8,14 @@
 
 import Cocoa
 
-class ViewController: NSViewController, NSWindowDelegate {
+class ViewController: NSViewController, NSWindowDelegate, NSTextViewDelegate {
     
     @IBOutlet weak var progressIndicator: NSProgressIndicator!
     @IBOutlet weak var beforeView: NSScrollView!
     @IBOutlet weak var afterView: NSScrollView!
     @IBOutlet weak var ResultLabel: NSTextField!
+    @IBOutlet var beforeText: NSTextView!
+    @IBOutlet var afterText: NSTextView!
     
     override func viewDidAppear() {
         view.window?.delegate = self
@@ -23,6 +25,7 @@ class ViewController: NSViewController, NSWindowDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        beforeText.delegate = self
     }
 
     override var representedObject: Any? {
@@ -31,6 +34,10 @@ class ViewController: NSViewController, NSWindowDelegate {
         }
     }
     
+    func textDidChange(_ notification: Notification) {
+        print(beforeText.string)
+    }
+
     @IBAction func beforeFiledChanged(_ sender: NSTextField) {
         /*
         afterView.stringValue = ""
