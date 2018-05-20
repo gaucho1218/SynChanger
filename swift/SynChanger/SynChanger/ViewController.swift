@@ -21,7 +21,9 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
+    
+    @IBAction func beforeFiledChanged(_ sender: NSTextField) {
+        print("before: \(sender.stringValue)")
+    }
 }
 
