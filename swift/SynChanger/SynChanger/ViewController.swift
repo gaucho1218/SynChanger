@@ -30,9 +30,29 @@ class ViewController: NSViewController, NSWindowDelegate {
     }
     
     @IBAction func beforeFiledChanged(_ sender: NSTextField) {
-        print("before: \(sender.stringValue)")
+        afterField.stringValue = ""
         
-        afterField.stringValue = sender.stringValue
+        for c in sender.stringValue
+        {
+            switch c
+            {
+            case "<":
+                afterField.stringValue += "&lt;"
+                break
+            case ">":
+                afterField.stringValue += "&gt;"
+                break
+            case "&":
+                afterField.stringValue += "&amp;"
+                break
+            case "\"":
+                afterField.stringValue += "&quot;"
+                break
+            default:
+                afterField.stringValue += String(c)
+                break
+            }
+        }
     }
     
     func windowDidResize(_ notification: Notification) {
