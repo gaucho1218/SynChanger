@@ -62,10 +62,16 @@ class ViewController: NSViewController, NSWindowDelegate {
     }
     
     func windowDidResize(_ notification: Notification) {
-        let width = (((view.window?.frame.size.width)! - 50) / 2)
-        let height = (((view.window?.frame.size.height)! - 50))
+        let width = (view.window?.frame.size.width)!
+        let height = (view.window?.frame.size.height)!
+   
+        progressIndicator.frame = NSMakeRect(20, height - 51,
+                                             width - 40, 20)
         
+        
+        /*
         beforeView.frame = NSMakeRect(15, 15, width, height)
         afterView.frame = NSMakeRect(width + 35, 15, width, height)
+ */
     }
 }
