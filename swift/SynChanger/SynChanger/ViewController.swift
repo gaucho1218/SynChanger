@@ -13,6 +13,10 @@ class ViewController: NSViewController, NSWindowDelegate {
     @IBOutlet weak var afterField: NSTextField!
     @IBOutlet weak var beforeField: NSTextField!
     
+    @IBOutlet weak var progressIndicator: NSProgressIndicator!
+    @IBOutlet weak var beforeView: NSScrollView!
+    @IBOutlet weak var afterView: NSScrollView!
+    
     override func viewDidAppear() {
         view.window?.delegate = self
     }
@@ -30,36 +34,38 @@ class ViewController: NSViewController, NSWindowDelegate {
     }
     
     @IBAction func beforeFiledChanged(_ sender: NSTextField) {
-        afterField.stringValue = ""
+        /*
+        afterView.stringValue = ""
         
         for c in sender.stringValue
         {
             switch c
             {
             case "<":
-                afterField.stringValue += "&lt;"
+                afterView.stringValue += "&lt;"
                 break
             case ">":
-                afterField.stringValue += "&gt;"
+                afterView.stringValue += "&gt;"
                 break
             case "&":
-                afterField.stringValue += "&amp;"
+                afterView.stringValue += "&amp;"
                 break
             case "\"":
-                afterField.stringValue += "&quot;"
+                afterView.stringValue += "&quot;"
                 break
             default:
-                afterField.stringValue += String(c)
+                afterView.stringValue += String(c)
                 break
             }
         }
+ */
     }
     
     func windowDidResize(_ notification: Notification) {
         let width = (((view.window?.frame.size.width)! - 50) / 2)
         let height = (((view.window?.frame.size.height)! - 50))
         
-        beforeField.frame = NSMakeRect(15, 15, width, height)
-        afterField.frame = NSMakeRect(width + 35, 15, width, height)
+        beforeView.frame = NSMakeRect(15, 15, width, height)
+        afterView.frame = NSMakeRect(width + 35, 15, width, height)
     }
 }
